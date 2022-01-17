@@ -1,0 +1,23 @@
+html{
+    box-sizing: border-box;
+}
+*,*:after,*:before{
+    box-sizing: inherit;
+}
+.App{
+    width:80%;
+    margin:0 auto;
+}
+.App-logo{
+    width:100px;
+}
+.App-logo img{
+    width:100%;
+}
+.App-logo img:hover{
+    cursor:pointer;
+}
+
+input{
+    width:100%
+}
