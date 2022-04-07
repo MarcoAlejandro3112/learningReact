@@ -1,8 +1,10 @@
 import {useState, useEffect} from 'react'
 import getGifs from '../services/getGifs'
+import GifsContextProvider  from '../context/GifsContext'
+import { useContext } from 'react'
 
 export default function useGifs({keyword} = {keyword: null}){
-const [gifs, setGifs] = useState([])
+const {gifs, setGifs} = useContext(GifsContextProvider)
 const[loading,setLoading] = useState()
 
     useEffect(function() {

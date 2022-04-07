@@ -1,9 +1,10 @@
 import './App.css'
-import logo from './Giphy-logo.svg'
+import logo from './Giphy-logo.png'
 import SearchResults from './pages/SearchResults'
 import Home from './pages/Home/index'
 import {Route, Link} from 'wouter'
-
+import {GifsContextProvider} from './context/GifsContext'
+import Detail from './pages/Detail'
 function App() {
   
   return (
@@ -13,8 +14,11 @@ function App() {
           <img alt="Giffy logo" src={logo} />
         </figure>
       </Link>
-      <Route path="/" component={Home}/>
-      <Route path="/search/:keyword" component={SearchResults}/>
+      <GifsContextProvider>
+        <Route path="/" component={Home}/>
+        <Route path="/search/:keyword" component={SearchResults}/>
+        <Route path="/gif/:id" component={Detail}/>
+      </GifsContextProvider>
     </div>
   );
 }

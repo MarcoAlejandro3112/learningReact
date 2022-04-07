@@ -19,7 +19,7 @@ export default function Home() {
     return(
         <>
             <form onSubmit={handleSubmit}>
-                <input onChange={handleChange} type="text" value={keyword} />
+                <input className="searcher" onChange={handleChange} type="text" value={keyword} />
             </form>
             <h2>Última búsqueda</h2>
             <ListOfGifs gifs={gifs}/>
